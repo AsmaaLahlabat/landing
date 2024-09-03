@@ -1,25 +1,30 @@
 @import url(./base.css);
-body{
+
+body {
     font-family: var(--mainFont);
     background-color: #eee;
 }
 
-.header{
+.fa-solid.fa-bars {
+    display: none;
+}
+
+.header {
     background-color: #fff;
     padding: 20px 0;
 }
 
-.active{
+.active {
     font-weight: 900;
 }
 
-.header .logo{
+.header .logo {
     display: flex;
     align-items: center;
     gap: 2px;
 }
 
-.header .logo a{
+.header .logo a {
     color: var(--mainColor);
 }
 
@@ -27,22 +32,22 @@ body{
     width: 35px;
 }
 
-.nav ul {
+.navbar ul {
     display: flex;
     gap: 16.47px;
 }
 
-.nav ul li a{
+.navbar ul li a {
     color: #101928;
 }
 
 .auth {
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
-.auth a{
+.auth a {
     font-family: var(--subfont);
     padding: 5.3541765213012695px 30.18113136291504px;
     border-radius: 10px;
@@ -55,10 +60,116 @@ body{
 
 }
 
-.auth .Register{
+.auth .Register {
     border: 2px solid #545be8;
     background-color: #545be8;
     color: #fff;
     font-weight: 700;
 
 }
+
+@media screen and (max-width:992px) {
+
+    .navbar,
+    .auth {
+        display: none;
+    }
+
+    .fa-solid.fa-bars {
+        display: block;
+        order: 2;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        width: calc(100% - 70px);
+        margin: auto;
+        padding: 0 60px;
+    }
+
+}
+
+.footer {
+    background-color: #393E46;
+    color: #fff;
+    padding: 50px 0;
+    
+}
+
+.footer a{
+    color: #fff;
+}
+
+.footer-start{
+   width: 400px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px; 
+}
+
+.footer-start .logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer-start .icons img{
+    width: 20px;
+    height: 20px;
+}
+
+.footer-start .logo img {
+    width: 35px;
+}
+
+.footer-end{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+
+.footer-end nav{
+    display: flex;
+   flex-direction: column;
+   gap: 10px; 
+   flex-wrap: wrap;
+}
+
+.footer-end .footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+@media screen and (max-width:1200px) {
+
+    .footer .row{
+        gap: 10px;
+    }
+    .footer-end{
+        width: 100%;
+    }
+    .footer-start{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .footer-end .footer-item{ 
+        width: 50%;
+        margin-bottom: 21px;
+    }
+}
+
+    @media screen and (max-width:400px) {
+        .footer-end .footer-item{ 
+            width: 50%;
+            margin-bottom: 21px;
+        }    
+
+    }
